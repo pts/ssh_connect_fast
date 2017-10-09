@@ -46,7 +46,7 @@ which the default ssh-agent is not necessary. ssh_connect_fast automates
 this by expecting the socket filename of that ssh-agent in
 $SSH_AUTH_SOCK_FAST, and when it detects this evironment variable and a
 compatible server host, it calls ssh(1) with the variable renamed to
-$SSSH_AUTH_SOCK.
+$SSH_AUTH_SOCK.
 
 To solve R2, one can use `ssh -F"$HOME/.ssh/config"' instead of `ssh', so
 that ssh(1) won't read the system-level config (/etc/ssh/ssh_config).
