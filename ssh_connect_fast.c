@@ -106,8 +106,8 @@ static void rename_from_ssh_auth_sock_fast(char **envp) {
 }
 
 static char is_fast_host(char *ssh_config_filename, char **args) {
-  /* OpenSSH 7.3 and OpenSSH 8.2, from `ssh -h'. */
-  static const char ssh_flags_with_arg[] = "DEFIJLOQRSWbceilmopw";
+  /* OpenSSH 7.3, 7.9 and OpenSSH 8.2, from `ssh -h'. */
+  static const char ssh_flags_with_arg[] = "BDEFIJLOQRSWbceilmopw";
   /* Must be large enough to fit hostpath_prefix. Should
    * ne large enough to be efficient to avoid system call overhead with
    * read(2). Should be large enough to fit the entire line of hostpath_prefix
